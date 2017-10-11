@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { UserInput } from './EditorUserInput';
+
+declare var ace: any;
 
 @Component({
   selector: 'app-editor',
@@ -7,14 +9,21 @@ import { UserInput } from './EditorUserInput';
   styleUrls: ['./editor.component.css']
 })
 
+export class EditorComponent implements AfterViewInit {
+    @ViewChild('editor') editor;
+    text = '';
+    ngAfterViewInit() {
 
+        this.editor.getEditor().setOptions({
+            enableBasicAutocompletion: true
+        });
 
-export class EditorComponent implements OnInit {
-  @Input() input: UserInput;
-  constructor() { }
+        this.editor.getEditor().commands.addCommand({
+            name: 'showOtherCompletions',
+            bindKey: 'Ctrl-.',
+            exec: function (editor) {
 
-submitted = false;
-ngOnInit() {}
-onSubmit() { this.submitted = true; }
-
+            }
+        });
+    }
 }

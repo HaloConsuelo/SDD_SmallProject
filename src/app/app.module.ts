@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { ReactiveFormsModule } from '@angular/forms';
+import { AceEditorModule } from 'ng2-ace-editor';
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -13,12 +14,13 @@ import { PreviewComponent } from './preview/preview.component';
     AppComponent,
     ToolbarComponent,
     EditorComponent,
-    PreviewComponent
+    PreviewComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AceEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
