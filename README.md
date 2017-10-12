@@ -17,12 +17,11 @@ Everything in this project is WIP! including this readme!
     - `Debugger For Chrome`
     
     Any additional ones are your choice :)
-3) Next, I am using the [Angular CLI](https://github.com/angular/angular-cli) to create a new project. I ran the following commands, but you _do not_ have to do this. These commands create a new project called `MarkDownEditor`, navigate to the new directory made, and start the development server, respectively.
-```cmd
-ng new MarkDownEditor
-cd MarkDownEditor
-ng serve
-```
+3) Next, I am using the [Angular CLI](https://github.com/angular/angular-cli). Please make sure you have this by installing `npm install -g @angular/cli`.
+
+4) install all the necessary components by doing `npm install`
+
+5) After installing all the necessary node packages, please use the command `ng serve` to build and run localhost.
 
 You all should only have to run the last command, `ng serve`, in order to see output in your browser. This will start your development server on `localhost:4200`.
 
@@ -53,6 +52,8 @@ Before pushing your branch to GitHub, please make sure to do the following thing
     # For greater control, use git rebase -i dev
     ```
     why? When you push your branch to the remote repo, it will only include _your changes_, which makes commit history easier to read.
+
+3) Run available tests by using `ng test` and make sure they pass!
 
 ## Pushing
 ```bash
