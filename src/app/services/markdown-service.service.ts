@@ -1,6 +1,24 @@
 import { Injectable } from '@angular/core';
 
 import marked from 'marked';
+import highlight from 'highlight.js';
+
+const markdownString = '```js\n console.log("hello"); \n```';
+
+// Using async version of marked
+marked(markdownString, function (err, content) {
+  if (err) {throw err; }
+  console.log(content);
+});
+
+// Synchronous highlighting with highlight.js
+// marked.setOptions({
+//   highlight: function (code) {
+//     return require('highlight.js').highlightAuto(code).value;
+//   }
+// });
+
+console.log(marked(markdownString));
 
 interface IMarkdownConfig {
   sanitize?: boolean;
