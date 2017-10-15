@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { UserInput } from './editor/EditorUserInput';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,10 @@ import { UserInput } from './editor/EditorUserInput';
 })
 
 export class AppComponent {
+  content: string;
   title= 'Markit.';
+
+  onEditorInput(event) {
+    this.content = event;
+  }
 }

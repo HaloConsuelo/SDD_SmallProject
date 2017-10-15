@@ -1,11 +1,8 @@
-<div class="row">
-    <div class="col-md-6">
-      <h3>Editor</h3>
-      <ace-editor [(text)]="text"
-      [autoUpdateContent]="true" 
-      style="min-height: 200px; width:100%; overflow: auto; "></ace-editor>
-    </div>
-    <div class="col-md-6">
-          <app-preview [(data)]="text"></app-preview>
-    </div>
-</div>
+<h3>Editor</h3>
+<ace-editor [(text)]="userInput"
+#editor
+(textChanged)="onEditorTextChange()"
+[options]="options"
+[autoUpdateContent]="autoUpdateContent"
+style="min-height: 400px; width:100%; font-size:12px;overflow: auto;"
+[mode]="mode"></ace-editor>
