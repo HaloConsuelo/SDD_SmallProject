@@ -11,13 +11,6 @@ marked(markdownString, function (err, content) {
   console.log(content);
 });
 
-// Synchronous highlighting with highlight.js
-// marked.setOptions({
-//   highlight: function (code) {
-//     return require('highlight.js').highlightAuto(code).value;
-//   }
-// });
-
 console.log(marked(markdownString));
 
 interface IMarkdownConfig {
