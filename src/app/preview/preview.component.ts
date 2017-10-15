@@ -3,8 +3,6 @@ import { EditorComponent } from '../editor/editor.component';
 
 import {MarkdownService} from '../services/markdown-service.service';
 
-import * as marked from 'marked';
-
 @Component({
   selector: 'app-preview',
   template: `<h2>Preview</h2>

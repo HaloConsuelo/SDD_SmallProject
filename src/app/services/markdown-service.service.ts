@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import * as marked from 'marked';
+import highlight from 'highlight.js';
 
 /**
  * Marked library configuration interface.
@@ -58,7 +59,12 @@ export class MarkdownService {
   convert(markdown: string): string {
     if (!markdown) {
       return '';
-    }
-    return this.md.parse(markdown);
-  }
+    } else {
+    return marked(markdown, function (err, content) {
+      if (err) {
+        throw err;
+      }
+      return content;
+    });
+  }}
 }
