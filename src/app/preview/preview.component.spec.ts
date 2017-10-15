@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PreviewComponent } from './preview.component';
+import { MarkdownService } from '../services/markdown-service.service';
 
 describe('PreviewComponent', () => {
   let component: PreviewComponent;
@@ -8,7 +9,8 @@ describe('PreviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PreviewComponent ]
+      declarations: [ PreviewComponent ],
+      providers: [MarkdownService]
     })
     .compileComponents();
   }));
