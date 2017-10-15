@@ -4,9 +4,13 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
  */
 
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
+
 body {
+    /* padding: 2em 23em; */
     padding-top: 124px;
     margin-bottom: 30px;
+    background: lightgray;
 }
 
 @media (min-width: 992px) {
