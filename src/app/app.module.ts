@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { PreviewComponent } from './preview/preview.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AceEditorModule
+    AceEditorModule,
+    MatButtonModule,
+    MatCheckboxModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
