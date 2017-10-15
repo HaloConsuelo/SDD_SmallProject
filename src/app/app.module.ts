@@ -8,6 +8,7 @@ import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { PopupComponent } from './popup/popup.component';
 import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk/table';
 
@@ -46,12 +47,14 @@ import {
 } from '@angular/material';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     EditorComponent,
     PreviewComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
