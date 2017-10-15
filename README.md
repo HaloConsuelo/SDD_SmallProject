@@ -5,25 +5,18 @@ Everything in this project is WIP! including this readme!
 
 # How to get up and running
 1) Install `node` and `npm` through [this link](https://docs.npmjs.com/getting-started/installing-node).
-
-2) Download Visual Studio Code [here](https://code.visualstudio.com)
-    a. Once installed, install tools and languages for VSCode via the "Tools and Languages" option within the editor. Install the following (though you may want to install more:
-    - HTML CSS Support
-    - TypeScript
-    - JavaScript
-    - `Document This`
-    - `angular2-inline`
-    - `Node.js Modules Intellisense`
-    - `Debugger For Chrome`
     
-    Any additional ones are your choice :)
-3) Next, I am using the [Angular CLI](https://github.com/angular/angular-cli). Please make sure you have this by installing `npm install -g @angular/cli`.
+2) Next, I am using the [Angular CLI](https://github.com/angular/angular-cli). Please make sure you have this by installing `npm install -g @angular/cli`.
 
-4) install all the necessary components by doing `npm install`
+3) install all the necessary components by doing `npm install` in the project directory, which will install all needed packages from the package.json file :smile:.
 
-5) After installing all the necessary node packages, please use the command `ng serve` to build and run localhost.
+4) After installing all the necessary node packages, please use the command `ng serve` to build and run localhost.
 
 You all should only have to run the last command, `ng serve`, in order to see output in your browser. This will start your development server on `localhost:4200`.
+
+## Testing note
+Though we are still working on tests, you should be able to view the output of our various Karma/Protractor/etc. tests by running:
+ `ng test` OR `npm test`.
 
 # Repository PR policy
 

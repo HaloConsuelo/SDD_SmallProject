@@ -1,7 +1,8 @@
-  <div class="container">
-    <h3>Editor</h3>
-    <form>
-        <div class="form-group">
-          <textarea class="form-control" rows="15" id="editor" style="width:100%"></textarea>
-        </div>
-      </form>
+<h3>Editor</h3>
+<ace-editor [(text)]="userInput"
+#editor
+(textChanged)="onEditorTextChange()"
+[options]="options"
+[autoUpdateContent]="autoUpdateContent"
+style="min-height: 400px; width:100%; font-size:12px;overflow: auto;"
+[mode]="mode"></ace-editor>
