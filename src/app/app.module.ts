@@ -8,7 +8,7 @@ import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { PopupComponent } from './popup/popup.component';
+import { DialogOverviewButtComponent, PopupComponent  } from './popup/popup.component';
 import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk/table';
 
@@ -54,7 +54,8 @@ import {
     ToolbarComponent,
     EditorComponent,
     PreviewComponent,
-    PopupComponent,
+    DialogOverviewButtComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +63,7 @@ import {
     AceEditorModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDialogModule,
     BrowserAnimationsModule,
   ],
   exports: [
@@ -69,6 +71,7 @@ import {
     MatCheckboxModule,
   ],
   providers: [],
+  entryComponents: [PopupComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
