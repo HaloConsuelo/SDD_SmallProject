@@ -1,25 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { EditorComponent } from '../editor/editor.component';
 
 import {MarkdownService} from '../services/markdown-service.service';
-
-import marked from 'marked';
 
 @Component({
   selector: 'app-preview',
   template: `<h2>Preview</h2>
   <div [innerHTML]="convertedData">
-  </div>`
+  </div>`,
+  providers: [MarkdownService]
 })
 
-export class PreviewComponent {
+export class PreviewComponent implements OnChanges {
     @Input('data')
-    data: string;
+    data = '';
     convertedData: string;
-    md: any;
-    
+
+    constructor(private markdown: MarkdownService) {
+    }
+
     ngOnChanges() {
-      this.md = marked.setOptions({});
-      this.convertedData = this.md.parse(this.data);
+      console.log(this.data);
+      this.convertedData = this.markdown.convert(this.data);
     }
   }

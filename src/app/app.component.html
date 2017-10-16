@@ -1,18 +1,20 @@
 <app-toolbar [title]='title'></app-toolbar>
-    <!-- Page Content -->
-    <div class="container">
-  
-      <app-editor></app-editor>
-      
-      <!-- /.row -->
-  
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+     <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
     </div>
-    <!-- /.container -->
-  
-    <!-- Footer -->
-    <footer class="py-5 bg-dark footer">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    <div class="col-md-6">
+        <app-preview [data]="content" ></app-preview>
+    </div>
+  </div>
+  <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <!-- Footer -->
+  <footer class="py-5 bg-dark footer">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
+    </div>
+  </footer>
