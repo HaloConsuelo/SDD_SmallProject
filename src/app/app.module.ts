@@ -45,6 +45,7 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 
 
@@ -55,6 +56,7 @@ import {
     EditorComponent,
     PreviewComponent,
     PopupComponent,
+    NavMenuComponent,
   ],
   imports: [
     BrowserModule,
