@@ -8,7 +8,7 @@ import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { DialogOverviewButtComponent, PopupComponent  } from './popup/popup.component';
+import { DialogOverviewButtonComponent, PopupComponent  } from './popup/popup.component';
 import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk/table';
 
@@ -54,7 +54,7 @@ import {
     ToolbarComponent,
     EditorComponent,
     PreviewComponent,
-    DialogOverviewButtComponent,
+    DialogOverviewButtonComponent,
     PopupComponent
   ],
   imports: [

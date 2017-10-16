@@ -5,10 +5,10 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
  * @title Dialog Overview
  */
 @Component({
-  selector: 'app-fucku',
+  selector: 'app-popup-trigger',
   templateUrl: 'popup.component.html'
 })
-export class DialogOverviewButtComponent {
+export class DialogOverviewButtonComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
