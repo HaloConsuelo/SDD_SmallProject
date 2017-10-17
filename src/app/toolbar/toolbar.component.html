@@ -1,0 +1,31 @@
+<div>
+    <mat-toolbar color="primary">
+      <span>Editor</span>
+      <button mat-icon-button [mat-menu-trigger-for]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-menu x-position="before" #menu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor] = "import">Import...</button>
+      <button mat-menu-item [matMenuTriggerFor] = "export">Export as...</button>
+      <button mat-menu-item [matMenuTriggerFor] = "save">Save...</button>
+      
+    </mat-menu>
+
+    <mat-menu #import = "matMenu">
+        <button mat-menu-item>From Computer</button>
+        <button mat-menu-item>Other</button>
+    </mat-menu>
+
+    <mat-menu #export = "matMenu">
+        <button mat-menu-item>.PDF</button>
+        <button mat-menu-item>.DOC</button>
+        <button mat-menu-item>Other</button>  
+    </mat-menu>
+
+    <mat-menu #save = "matMenu">
+        <button mat-menu-item>Save</button>
+        <button mat-menu-item>Save as...</button>
+    </mat-menu>
+
+  </div>

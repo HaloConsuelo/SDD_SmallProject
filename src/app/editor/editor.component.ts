@@ -1,7 +1,6 @@
 import { Component, Input, Output,
          OnInit, ViewChild, EventEmitter,
           AfterViewInit } from '@angular/core';
-
 declare var ace: any;
 
 

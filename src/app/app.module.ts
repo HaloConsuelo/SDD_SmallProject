@@ -11,42 +11,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { PopupComponent } from './popup/popup.component';
 import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk/table';
-
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-} from '@angular/material';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-
+import { MaterialModule } from './material.module';
 
 
 @NgModule({
@@ -62,13 +28,11 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     BrowserModule,
     FormsModule,
     AceEditorModule,
-    MatButtonModule,
-    MatCheckboxModule,
     BrowserAnimationsModule,
+    MaterialModule,
   ],
   exports: [
-    MatButtonModule,
-    MatCheckboxModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

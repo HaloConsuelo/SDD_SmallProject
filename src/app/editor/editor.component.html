@@ -1,8 +1,13 @@
-<h3>Editor</h3>
+
+<app-toolbar><h3>Editor</h3>
+</app-toolbar>
+
+
 <ace-editor [(text)]="userInput"
 #editor
 (textChanged)="onEditorTextChange()"
 [options]="options"
 [autoUpdateContent]="autoUpdateContent"
 style="min-height: 100%; width:100%; font-size:12px;overflow: auto;"
-[mode]="mode"></ace-editor>
+[mode]="mode"> </ace-editor>
+
