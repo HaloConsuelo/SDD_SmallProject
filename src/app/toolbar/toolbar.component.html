@@ -1,9 +1,9 @@
-<div>
+
     <mat-toolbar color="primary">
-      <span>Editor</span>
       <button mat-icon-button [mat-menu-trigger-for]="menu">
         <mat-icon>menu</mat-icon>
       </button>
+      <span>Editor</span>
     </mat-toolbar>
     <mat-menu x-position="before" #menu="matMenu">
       <button mat-menu-item [matMenuTriggerFor] = "import">Import...</button>
@@ -27,5 +27,7 @@
         <button mat-menu-item>Save</button>
         <button mat-menu-item>Save as...</button>
     </mat-menu>
+    <br>
 
-  </div>
+
+  

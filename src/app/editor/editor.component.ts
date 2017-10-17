@@ -3,6 +3,8 @@ import { Component, Input, Output,
           AfterViewInit } from '@angular/core';
 declare var ace: any;
 
+import { ToolbarComponent } from '../toolbar/toolbar.component';
+
 
 @Component({
     selector: 'app-editor',
