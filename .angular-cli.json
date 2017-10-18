@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "theme.scss"
       ],
       "scripts": ["../node_modules/ace-builds/src-min/ace.js", 
         "../node_modules/ace-builds/src-min/mode-markdown.js"],
@@ -58,4 +59,6 @@
     "styleExt": "css",
     "component": {}
   }
+  
 }
+
