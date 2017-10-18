@@ -3,10 +3,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-     <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
+        <app-toolbar></app-toolbar>
+        <split direction="horizontal">
+            <split-area [size]="50">
+                <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
+              </split-area>
+            <split-area [size]="70">
+        <app-preview [data]="content" ></app-preview>
+            </split-area>
+        </split>
     </div>
-        
-                
 
   </div>
   <!-- /.row -->
