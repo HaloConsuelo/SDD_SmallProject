@@ -4,7 +4,7 @@ import { Component, Input, Output,
 declare var ace: any;
 
 import { ToolbarComponent } from '../toolbar/toolbar.component';
-
+import { PreviewComponent } from '../preview/preview.component';
 
 @Component({
     selector: 'app-editor',

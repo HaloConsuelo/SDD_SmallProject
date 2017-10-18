@@ -1,19 +1,13 @@
 
 <app-toolbar>
 </app-toolbar>
+<ace-editor [(text)]="userInput"
+#editor
+(textChanged)="onEditorTextChange()"
+[options]="options"
+[autoUpdateContent]="autoUpdateContent"
+style="min-height: 100%; width:100%; font-size:12px;overflow: auto;"
+[mode]="mode"> 
+</ace-editor>
 
-<split direction="horizontal">
-        <split-area [size]="25">
-                <ace-editor [(text)]="userInput"
-                #editor
-                (textChanged)="onEditorTextChange()"
-                [options]="options"
-                [autoUpdateContent]="autoUpdateContent"
-                style="min-height: 100%; width:100%; font-size:12px;overflow: auto;"
-                [mode]="mode"> 
-                </ace-editor>
-        </split-area>
-        <split-area [size]="75">
-                <app-preview [data]="content" ></app-preview>
-        </split-area>
-</split>
+
