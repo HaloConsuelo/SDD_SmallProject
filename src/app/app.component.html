@@ -2,18 +2,20 @@
 <!-- Page Content -->
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-xs-9 col-md-8">
         <app-toolbar></app-toolbar>
-        <split direction="horizontal">
-            <split-area [size]="50">
+    
+        <split [gutterSize]="10" >
+            <split-area >
                 <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
-            <split-area [size]="70">
-        <app-preview [data]="content" ></app-preview>
+            <split-area>
+              <app-preview [data]="content" ></app-preview>
             </split-area>
         </split>
+       
     </div>
-
+  
   </div>
   <!-- /.row -->
   </div>
