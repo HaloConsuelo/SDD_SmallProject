@@ -13,7 +13,7 @@ import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk/table';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MaterialModule } from './material.module';
-
+import {AngularSplitModule} from 'angular-split';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { MaterialModule } from './material.module';
     AceEditorModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AngularSplitModule,
   ],
   exports: [
 

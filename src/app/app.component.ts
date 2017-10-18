@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
+import { AngularSplitModule } from 'angular-split';
 
 @Component({
   selector: 'app-root',
