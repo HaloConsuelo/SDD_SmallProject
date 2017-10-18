@@ -5,7 +5,7 @@
     <div class="col-xs-12 col-md-12 col-lg-12">
         <app-toolbar></app-toolbar>
     
-        <split [gutterSize]="10" >
+        <split [gutterSize]="5" >
             <split-area >
                 <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
@@ -13,6 +13,14 @@
               <app-preview [data]="content" ></app-preview>
             </split-area>
         </split>
+
+        <br>
+        <mat-toolbar color="primary">
+            <mat-slide-toggle [checked]="isChecked" color="warn"> 
+                <h4>Preview</h4>
+            </mat-slide-toggle>
+        
+    </mat-toolbar>
        
     </div>
   
@@ -21,7 +29,7 @@
   </div>
   <!-- /.container -->
   <!-- Footer -->
-  <footer class="py-5 bg-dark footer">
+  <footer class="py-4 bg-dark footer">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
     </div>
