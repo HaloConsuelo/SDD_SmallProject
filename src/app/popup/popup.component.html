@@ -1,3 +1,6 @@
-<ol>
-    <button mat-raised-button (click)="openDialog()">Pick one</button>
-</ol>
+<div mat-dialog-content>
+  <p>{{data.convertedHTML}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" tabindex="-1">No Thanks</button>
+</div>
