@@ -9,9 +9,9 @@ import 'rxjs/Rx';
 })
 
 export class AppComponent {
-  content: string;
-  title = 'Markit.';
-
+  content= '';
+  title= 'Markit.';
+  
   onEditorInput(event) {
     this.content = event;
   }
