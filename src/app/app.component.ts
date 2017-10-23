@@ -10,7 +10,7 @@ import { AngularSplitModule } from 'angular-split';
 })
 
 export class AppComponent {
-  content: string;
+  content= '';
   title= 'Markit.';
 
   onEditorInput(event) {
