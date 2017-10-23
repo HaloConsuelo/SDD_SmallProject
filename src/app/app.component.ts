@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 
@@ -11,7 +11,12 @@ import 'rxjs/Rx';
 export class AppComponent {
   content= '';
   title= 'Markit.';
-  
+
+  @HostListener('window:beforeunload', ['$event'])
+  promptExitWarning($event) {
+    $event.returnValue = 'Your data will be lost!';
+  }
+
   onEditorInput(event) {
     this.content = event;
   }
