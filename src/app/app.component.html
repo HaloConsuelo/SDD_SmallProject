@@ -3,18 +3,29 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-     <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
+      <app-editor (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
     </div>
     <div class="col-md-6">
-        <app-preview [data]="content" ></app-preview>
+      <app-preview [data]="content"></app-preview>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
     </div>
   </div>
   <!-- /.row -->
+</div>
+<!-- /.container -->
+<!-- Footer -->
+<footer class="py-5 bg-dark footer">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
   </div>
-  <!-- /.container -->
-  <!-- Footer -->
-  <footer class="py-5 bg-dark footer">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
-    </div>
-  </footer>
+</footer>
