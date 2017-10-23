@@ -4,13 +4,12 @@
   <div class="row">
     <div class="col-xs-12 col-md-12 col-lg-12">
         <app-toolbar></app-toolbar>
-    
         <split [gutterSize]="5" >
             <split-area >
                 <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
-            <split-area>
-              <app-preview [data]="content" ></app-preview>
+            <split-area >
+              <app-preview [data]="content"  ></app-preview>
             </split-area>
         </split>
 
@@ -19,14 +18,14 @@
             <mat-slide-toggle [checked]="isChecked" color="warn"> 
                 <h4>Preview</h4>
             </mat-slide-toggle>
-        
     </mat-toolbar>
-       
-    </div>
-  
+    
+    </div>  
+    
   </div>
   <!-- /.row -->
   </div>
+  
   <!-- /.container -->
   <!-- Footer -->
   <footer class="footer" >
