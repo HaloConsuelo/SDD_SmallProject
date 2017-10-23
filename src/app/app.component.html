@@ -6,7 +6,7 @@
         <app-toolbar></app-toolbar>
         <split [gutterSize]="5" >
             <split-area >
-                <app-editor [userInput]="content" (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
+                <app-editor (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
             <split-area >
               <app-preview [data]="content"  ></app-preview>
@@ -24,6 +24,12 @@
     
   </div>
   <!-- /.row -->
+</div>
+<!-- /.container -->
+<!-- Footer -->
+<footer class="py-5 bg-dark footer">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
   </div>
   
   <!-- /.container -->
@@ -33,3 +39,4 @@
       <span class = "text-muted">Copyright &copy; Bridgewater State University SDD Fall 2017</span>
     </div>
   </footer>
+

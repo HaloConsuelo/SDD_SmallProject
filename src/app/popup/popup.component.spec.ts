@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit, Inject } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 import { PopupComponent } from './popup.component';
 
@@ -22,4 +24,6 @@ describe('PopupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  
 });

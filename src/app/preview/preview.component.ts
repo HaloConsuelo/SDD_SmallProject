@@ -20,5 +20,6 @@ export class PreviewComponent implements OnChanges {
     ngOnChanges() {
       console.log(this.data);
       this.convertedData = this.markdown.convert(this.data);
+      console.log(this.convertedData);
     }
   }
