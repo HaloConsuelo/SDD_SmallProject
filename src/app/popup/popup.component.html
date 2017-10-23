@@ -1,3 +1,6 @@
-<p>
-  popup works!
-</p>
+<div mat-dialog-content>
+  <p>{{data.convertedHTML}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" tabindex="-1">Close</button>
+</div>

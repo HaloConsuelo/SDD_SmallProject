@@ -5,9 +5,10 @@ import {MarkdownService} from '../services/markdown-service.service';
 
 @Component({
   selector: 'app-preview',
-  template: `<h2>Preview</h2>
-  <div [innerHTML]="convertedData">
-  </div>`,
+  template:
+  `<h2>Preview</h2>
+  <app-button [convertedHTML] = "convertedData"></app-button>
+  <div [innerHTML]="convertedData"></div>`,
   providers: [MarkdownService]
 })
 
@@ -22,5 +23,6 @@ export class PreviewComponent implements OnChanges {
     ngOnChanges() {
       console.log(this.data);
       this.convertedData = this.markdown.convert(this.data);
+      console.log(this.convertedData);
     }
   }

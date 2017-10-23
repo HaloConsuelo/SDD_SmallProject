@@ -1,50 +1,19 @@
+/* Angular specific imports */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { HttpModule } from '@angular/http';
+import { CdkTableModule } from '@angular/cdk/table';
+/* external imports */
 import { AceEditorModule } from 'ng2-ace-editor';
+/* SDD_SMALLPROJECT components */
+import { DialogOverviewButtonComponent, PopupComponent } from './popup/popup.component';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { PopupComponent } from './popup/popup.component';
-import { HttpModule } from '@angular/http';
-import { CdkTableModule } from '@angular/cdk/table';
-
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-} from '@angular/material';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 
@@ -57,6 +26,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     PreviewComponent,
     PopupComponent,
     NavMenuComponent,
+    DialogOverviewButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +34,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     AceEditorModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDialogModule,
     BrowserAnimationsModule,
   ],
   exports: [
@@ -71,6 +42,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     MatCheckboxModule,
   ],
   providers: [],
+  entryComponents: [PopupComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

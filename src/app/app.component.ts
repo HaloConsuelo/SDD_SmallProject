@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 
@@ -9,17 +9,15 @@ import 'rxjs/Rx';
 })
 
 export class AppComponent {
-  content: string;
+  content= '';
   title= 'Markit.';
+
+  @HostListener('window:beforeunload', ['$event'])
+  promptExitWarning($event) {
+    $event.returnValue = 'Your data will be lost!';
+  }
 
   onEditorInput(event) {
     this.content = event;
   }
-//  myData: Array<any>;
-
-  // constructor(private http: Http) {
-  //   this.http.get('https://jsonplaceholder.typicode.com/photos')
-  //   .map(response => response.json())
-  //   .subscribe(res => this.myData = res);
-  // }
 }
