@@ -2,7 +2,11 @@
 <ace-editor [(text)]="userInput"
 #editor
 (textChanged)="onEditorTextChange()"
+[theme] = "'eclipse'"
 [options]="options"
 [autoUpdateContent]="autoUpdateContent"
 style="min-height: 100%; width:100%; font-size:12px;overflow: auto;"
 [mode]="mode"></ace-editor>
+
+<!-- Typescript usage example https://github.com/fxmontigny/ng2-ace-editor -->
+<!-- Themes list: https://github.com/ajaxorg/ace/tree/master/lib/ace/theme -->

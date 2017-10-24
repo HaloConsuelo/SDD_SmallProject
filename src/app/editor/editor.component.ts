@@ -8,7 +8,6 @@ declare var ace: any;
 @Component({
     selector: 'app-editor',
     templateUrl: './editor.component.html',
-    styleUrls: ['./editor.component.css']
 })
 
 export class EditorComponent implements OnInit, AfterViewInit {

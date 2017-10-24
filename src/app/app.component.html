@@ -2,10 +2,13 @@
 <!-- Page Content -->
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
+      <app-sidenav></app-sidenav>
+    </div>
+    <div class="col-md-4">
       <app-editor (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <app-preview [data]="content"></app-preview>
     </div>
   </div>
