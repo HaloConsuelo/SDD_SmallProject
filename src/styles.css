@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
  */
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 
 
 body {
@@ -32,4 +32,8 @@ html {
 
 div.cdk-overlay-pane{
     min-width: 350px;
+}
+
+mat-toolbar{
+    background: ""
 }

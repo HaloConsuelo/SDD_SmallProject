@@ -1,5 +1,5 @@
 
-    <mat-toolbar color = "warn">
+    <mat-toolbar>
       <button mat-icon-button [mat-menu-trigger-for]="menu">
         <mat-icon>menu</mat-icon>
       </button>
@@ -20,6 +20,7 @@
     <mat-menu #export = "matMenu">
         <button mat-menu-item>.PDF</button>
         <button mat-menu-item>.DOC</button>
+        <button mat-menu-item>HTML</button>
         <button mat-menu-item>Other</button>  
     </mat-menu>
 

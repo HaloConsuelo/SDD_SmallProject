@@ -8,8 +8,8 @@
                 <app-editor #child (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
             <split-area [style.visibility]="(isChecked==false) ? 'visible' : 'hidden' ">
-                <mat-toolbar color="primary" >
-                    <mat-slide-toggle ([checked])="onChecked($event)" color="warn"> 
+                <mat-toolbar >
+                    <mat-slide-toggle ([checked])="onChecked($event)"> 
                         <h4>Preview</h4>
                     </mat-slide-toggle>
                   </mat-toolbar>
@@ -22,8 +22,8 @@
 </div>
 <!-- /.container -->
 <!-- Footer -->
-<footer class="py-5 bg-dark footer">
+<footer class="footer" >
   <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
+    <span class = "text-muted">Copyright &copy; Bridgewater State University SDD Fall 2017</span>
   </div>
-
+</footer>
