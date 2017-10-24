@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk/table';
+import { MaterialModule } from './material/material.module';
 /* external imports */
 import { AceEditorModule } from 'ng2-ace-editor';
 /* SDD_SMALLPROJECT components */
@@ -14,40 +15,6 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
-/* Angular Material design imports, see: https://material.angular.io */
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-} from '@angular/material';
 
 
 
@@ -64,14 +31,10 @@ import {
     BrowserModule,
     FormsModule,
     AceEditorModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatDialogModule,
+    MaterialModule,
     BrowserAnimationsModule,
   ],
   exports: [
-    MatButtonModule,
-    MatCheckboxModule,
   ],
   providers: [],
   entryComponents: [PopupComponent],
