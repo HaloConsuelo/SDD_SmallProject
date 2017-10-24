@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import { AngularSplitModule } from 'angular-split';
@@ -12,6 +12,8 @@ import { AngularSplitModule } from 'angular-split';
 export class AppComponent {
   content= '';
   title= 'Markit.';
+  @Input('isChecked')
+  isChecked= false;
 
   @HostListener('window:beforeunload', ['$event'])
   promptExitWarning($event) {
@@ -21,4 +23,12 @@ export class AppComponent {
   onEditorInput(event) {
     this.content = event;
   }
+
+  onChecked(): void {
+    this.isChecked = true;
+    setTimeout(function() {
+        this.edited = false;
+        console.log(this.edited);
+    }.bind(this), 3000);
+   }
 }
