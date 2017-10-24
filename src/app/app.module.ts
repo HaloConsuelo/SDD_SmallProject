@@ -14,14 +14,9 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditorComponent } from './editor/editor.component';
 import { PreviewComponent } from './preview/preview.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { PopupComponent } from './popup/popup.component';
-import { HttpModule } from '@angular/http';
-import { CdkTableModule } from '@angular/cdk/table';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MaterialModule } from './material.module';
-import {AngularSplitModule} from 'angular-split';
+import { AngularSplitModule } from 'angular-split';
 
 
 @NgModule({

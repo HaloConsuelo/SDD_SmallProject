@@ -1,27 +1,22 @@
 <app-nav-menu [title]='title'></app-nav-menu>
 <!-- Page Content -->
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-12 col-lg-12">
-        <app-toolbar></app-toolbar>
-        <split [gutterSize]="5" >
-            <split-area >
-                <app-editor (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
+  <div class="row" >
+        <split [gutterSize]="1" [height]="350" #parent>
+            <split-area>
+                <app-toolbar></app-toolbar>
+                <app-editor #child (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
-            <split-area >
-              <app-preview [data]="content"  ></app-preview>
-            </split-area>
-        </split>
-
+            <split-area [style.visibility]="(isChecked==false) ? 'visible' : 'hidden' ">
+                <mat-toolbar color="primary" >
+                    <mat-slide-toggle ([checked])="onChecked($event)" color="warn"> 
+                        <h4>Preview</h4>
+                    </mat-slide-toggle>
+                  </mat-toolbar>
+              <app-preview #child [data]="content"  ></app-preview>
+      </split-area>
+    </split>
         <br>
-        <mat-toolbar color="primary">
-            <mat-slide-toggle [checked]="isChecked" color="warn"> 
-                <h4>Preview</h4>
-            </mat-slide-toggle>
-    </mat-toolbar>
-    
-    </div>  
-    
   </div>
   <!-- /.row -->
 </div>
@@ -31,12 +26,4 @@
   <div class="container">
     <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
   </div>
-  
-  <!-- /.container -->
-  <!-- Footer -->
-  <footer class="footer" >
-    <div class="container">
-      <span class = "text-muted">Copyright &copy; Bridgewater State University SDD Fall 2017</span>
-    </div>
-  </footer>
 
