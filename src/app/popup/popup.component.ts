@@ -1,6 +1,6 @@
-import { Component, OnInit, Inject, OnChanges, Input } from '@angular/core';
+import { Component, Inject, OnChanges, Input } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-
+import * as PR from 'google-code-prettify/src/prettify.js';
 
 @Component({
   selector: 'app-popup',
@@ -31,6 +31,7 @@ export class DialogOverviewButtonComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
+    PR.prettyPrint();
     let dialogRef = this.dialog.open(PopupComponent, {
       data: { convertedHTML: this.convertedHTML },
       width: '250px'
