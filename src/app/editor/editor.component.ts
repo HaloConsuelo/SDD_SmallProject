@@ -1,9 +1,10 @@
 import { Component, Input, Output,
          OnInit, ViewChild, EventEmitter,
           AfterViewInit } from '@angular/core';
-
 declare var ace: any;
 
+import { ToolbarComponent } from '../toolbar/toolbar.component';
+import { PreviewComponent } from '../preview/preview.component';
 
 @Component({
     selector: 'app-editor',

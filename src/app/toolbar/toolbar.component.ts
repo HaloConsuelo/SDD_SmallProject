@@ -1,16 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.css']
+  styleUrls: ['./toolbar.component.css'],
 })
-export class ToolbarComponent implements OnInit {
-  @Input() title: string;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ToolbarComponent {
+  public isCollapsed = false;
 }
+

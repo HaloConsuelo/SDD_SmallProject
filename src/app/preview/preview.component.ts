@@ -5,10 +5,7 @@ import {MarkdownService} from '../services/markdown-service.service';
 
 @Component({
   selector: 'app-preview',
-  template:
-  `<h2>Preview</h2>
-  <app-button [convertedHTML] = "convertedData"></app-button>
-  <div [innerHTML]="convertedData"></div>`,
+  templateUrl: './preview.component.html',
   providers: [MarkdownService]
 })
 

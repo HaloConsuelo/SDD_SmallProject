@@ -1,31 +1,29 @@
-<app-toolbar [title]='title'></app-toolbar>
+<app-nav-menu [title]='title'></app-nav-menu>
 <!-- Page Content -->
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <app-editor (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
-    </div>
-    <div class="col-md-6">
-      <app-preview [data]="content"></app-preview>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-    </div>
+  <div class="row" >
+        <split [gutterSize]="1" [height]="350" #parent>
+            <split-area>
+                <app-toolbar></app-toolbar>
+                <app-editor #child (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
+              </split-area>
+            <split-area [style.visibility]="(isChecked==false) ? 'visible' : 'hidden' ">
+                <mat-toolbar >
+                    <mat-slide-toggle ([checked])="onChecked($event)"> 
+                        <h4>Preview</h4>
+                    </mat-slide-toggle>
+                  </mat-toolbar>
+              <app-preview #child [data]="content"  ></app-preview>
+      </split-area>
+    </split>
+        <br>
   </div>
   <!-- /.row -->
 </div>
 <!-- /.container -->
 <!-- Footer -->
-<footer class="py-5 bg-dark footer">
+<footer class="footer" >
   <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; BSU SDD Fall 2017</p>
+    <span class = "text-muted">Copyright &copy; Bridgewater State University SDD Fall 2017</span>
   </div>
 </footer>
