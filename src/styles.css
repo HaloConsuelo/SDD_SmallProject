@@ -24,3 +24,11 @@ html {
     position: relative;
     min-height: 100%;
   }
+
+.cdk-overlay-container{
+    margin: 0 auto;
+}
+
+div.cdk-overlay-pane{
+    min-width: 350px;
+}
