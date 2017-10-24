@@ -9,7 +9,8 @@ import { CdkTableModule } from '@angular/cdk/table';
 /* external imports */
 import { AceEditorModule } from 'ng2-ace-editor';
 /* SDD_SMALLPROJECT components */
-import { DialogOverviewButtonComponent, PopupComponent } from './popup/popup.component';
+import { PopupButtonComponent, PopupComponent } from './popup/popup.component';
+import { SidenavButtonComponent, SidenavComponent } from './sidenav/sidenav.component';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditorComponent } from './editor/editor.component';
@@ -49,16 +50,16 @@ import {
   MatStepperModule,
 } from '@angular/material';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     EditorComponent,
     PreviewComponent,
-    DialogOverviewButtonComponent,
-    PopupComponent
+    PopupButtonComponent,
+    PopupComponent,
+    SidenavButtonComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -67,11 +68,13 @@ import {
     MatButtonModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatSidenavModule,
     BrowserAnimationsModule,
   ],
   exports: [
     MatButtonModule,
     MatCheckboxModule,
+    MatSidenavModule
   ],
   providers: [],
   entryComponents: [PopupComponent],

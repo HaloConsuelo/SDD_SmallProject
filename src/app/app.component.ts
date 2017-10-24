@@ -12,6 +12,7 @@ export class AppComponent {
   content= '';
   title= 'Markit.';
 
+  /*https://stackoverflow.com/questions/36763141/is-there-any-lifecycle-hook-like-window-onbeforeunload-in-angular2*/
   @HostListener('window:beforeunload', ['$event'])
   promptExitWarning($event) {
     $event.returnValue = 'Your data will be lost!';
