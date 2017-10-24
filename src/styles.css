@@ -3,9 +3,6 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
  */
-
-/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
-
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
@@ -28,3 +25,11 @@ html {
     position: relative;
     min-height: 100%;
   }
+
+.cdk-overlay-container{
+    margin: 0 auto;
+}
+
+div.cdk-overlay-pane{
+    min-width: 350px;
+}
