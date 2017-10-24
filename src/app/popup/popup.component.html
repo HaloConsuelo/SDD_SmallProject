@@ -1,5 +1,7 @@
+<h1 mat-dialog-title>Export as HTML...</h1>
 <div mat-dialog-content>
-  <p>{{data.convertedHTML}}</p>
+    <pre class="prettyprint" *ngIf="data.convertedHTML !== '' ; else noValidMarkdown"><code class="language-html">{{data.convertedHTML}}</code></pre>
+    <ng-template #noValidMarkdown>No valid data!</ng-template>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()" tabindex="-1">Close</button>
