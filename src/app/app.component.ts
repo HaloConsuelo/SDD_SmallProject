@@ -24,11 +24,7 @@ export class AppComponent {
     this.content = event;
   }
 
-  onChecked(): void {
-    this.isChecked = true;
-    setTimeout(function() {
-        this.edited = false;
-        console.log(this.edited);
-    }.bind(this), 3000);
-   }
+  onCheck($event): void {
+    this.isChecked = $event;
+  }
 }

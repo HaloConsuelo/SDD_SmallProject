@@ -2,14 +2,14 @@
 <!-- Page Content -->
 <div class="container">
   <div class="row" >
-        <split [gutterSize]="1" [height]="350" #parent>
+        <split [gutterSize]="1" [height]="350" [visibleTransition]="true"#parent>
             <split-area>
                 <app-toolbar></app-toolbar>
                 <app-editor #child (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
-            <split-area [style.visibility]="(isChecked==false) ? 'visible' : 'hidden' ">
+            <split-area [visible]="isChecked==false">
                 <mat-toolbar >
-                    <mat-slide-toggle ([checked])="onChecked($event)"> 
+                    <mat-slide-toggle [checked]="isChecked" (change)="onCheck($event)" > 
                         <h4>Preview</h4>
                     </mat-slide-toggle>
                   </mat-toolbar>
