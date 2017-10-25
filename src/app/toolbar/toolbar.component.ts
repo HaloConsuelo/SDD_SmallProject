@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ToolbarComponent {
   public isCollapsed = false;
+  constructor(public dialog: MatDialog) {}
 }
 

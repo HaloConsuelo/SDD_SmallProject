@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { EditorComponent } from '../editor/editor.component';
 
-import {MarkdownService} from '../services/markdown-service.service';
+import { MarkdownService } from '../services/markdown-service.service';
 
 @Component({
   selector: 'app-preview',

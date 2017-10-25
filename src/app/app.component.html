@@ -1,29 +1,29 @@
 <app-nav-menu [title]='title'></app-nav-menu>
 <!-- Page Content -->
 <div class="container">
-  <div class="row" >
-        <split [gutterSize]="1" [height]="350" #parent>
-            <split-area>
-                <app-toolbar></app-toolbar>
-                <app-editor #child (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
-              </split-area>
-            <split-area [style.visibility]="(isChecked==false) ? 'visible' : 'hidden' ">
-                <mat-toolbar >
-                    <mat-slide-toggle ([checked])="onChecked($event)"> 
-                        <h4>Preview</h4>
-                    </mat-slide-toggle>
-                  </mat-toolbar>
-              <app-preview #child [data]="content"  ></app-preview>
+  <div class="row">
+    <split [gutterSize]="1" [height]="350" #parent>
+      <split-area>
+        <app-toolbar></app-toolbar>
+        <app-editor #child (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
+      </split-area>
+      <split-area [style.visibility]="(isChecked==false) ? 'visible' : 'hidden' ">
+        <mat-toolbar>
+          <mat-slide-toggle ([checked])="onChecked($event)">
+            <h4>Preview</h4>
+          </mat-slide-toggle>
+        </mat-toolbar>
+        <app-preview #child [data]="content"></app-preview>
       </split-area>
     </split>
-        <br>
+    <br>
   </div>
   <!-- /.row -->
 </div>
 <!-- /.container -->
 <!-- Footer -->
-<footer class="footer" >
+<footer class="footer">
   <div class="container">
-    <span class = "text-muted">Copyright &copy; Bridgewater State University SDD Fall 2017</span>
+    <span class="text-muted">Copyright &copy; Bridgewater State University SDD Fall 2017</span>
   </div>
 </footer>

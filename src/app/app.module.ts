@@ -9,7 +9,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 /* external imports */
 import { AceEditorModule } from 'ng2-ace-editor';
 /* SDD_SMALLPROJECT components */
-import { DialogOverviewButtonComponent, PopupComponent } from './popup/popup.component';
+import { PopupComponent } from './popup/popup.component';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { EditorComponent } from './editor/editor.component';
@@ -27,7 +27,6 @@ import { AngularSplitModule } from 'angular-split';
     PreviewComponent,
     PopupComponent,
     NavMenuComponent,
-    DialogOverviewButtonComponent,
 
   ],
   imports: [

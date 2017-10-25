@@ -25,5 +25,4 @@ describe('PopupComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  
 });
