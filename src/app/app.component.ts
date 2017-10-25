@@ -11,7 +11,7 @@ import { AngularSplitModule } from 'angular-split';
 
 export class AppComponent {
   content= '';
-  title= 'Markit.';
+  title = 'Markit.';
   @Input('isChecked')
   isChecked= false;
 

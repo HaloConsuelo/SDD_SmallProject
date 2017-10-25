@@ -2,17 +2,18 @@
 <!-- Page Content -->
 <div class="container">
   <div class="row" >
-        <split [gutterSize]="1" [height]="350" #parent>
+        <split [gutterSize]="2" [height]="350" #parent>
             <split-area>
                 <app-toolbar></app-toolbar>
                 <app-editor #child (notifyEditorTextChanged)="onEditorInput($event)"></app-editor>
               </split-area>
             <split-area [style.visibility]="(isChecked==false) ? 'visible' : 'hidden' ">
                 <mat-toolbar >
-                    <mat-slide-toggle ([checked])="onChecked($event)"> 
+                    <mat-slide-toggle ([checked])="onChecked($event)" color = "primary"> 
                         <h4>Preview</h4>
                     </mat-slide-toggle>
                   </mat-toolbar>
+                  <br>
               <app-preview #child [data]="content"  ></app-preview>
       </split-area>
     </split>
@@ -24,6 +25,6 @@
 <!-- Footer -->
 <footer class="footer" >
   <div class="container">
-    <span class = "text-muted">Copyright &copy; Bridgewater State University SDD Fall 2017</span>
+    <span>Copyright &copy; Bridgewater State University SDD Fall 2017</span>
   </div>
 </footer>

@@ -5,7 +5,11 @@
     /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
-    background-color: #2E2E2E;
+    background-color: #343434da;
+    color: white;
+    font-family: 'Economica', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
   }
 
 #parent{
@@ -20,4 +24,3 @@
     overflow-y: scroll;
     padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
 }
-  

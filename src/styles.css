@@ -5,13 +5,14 @@
  */
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
 
-
+@import '~https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300';
+@import '~https://fonts.googleapis.com/css?family=Squada+One';
 
 body {
     /* padding: 2em 23em; */
     padding-top: 124px;
     margin-bottom: 30px;
-    background: #fff8e1 ;
+    background: #ffffff ;
 }
 
 @media (min-width: 992px) {
@@ -34,6 +35,25 @@ div.cdk-overlay-pane{
     min-width: 350px;
 }
 
-mat-toolbar{
-    background: ""
+mat-toolbar.mat-toolbar{
+    background: #8b98a3;
+    color: #F5F5F5;
+}
+
+
+
+
+.nav-link {
+    color: white;
+    font-family: 'Economica', sans-serif;
+    font-size: 23px;
+
+}
+
+.h1, h1 {
+    font-family: 'Arizonia', cursive;
+    color: white;
+    border-bottom: 3px solid;
+    letter-spacing: 5px;
+    font-size: 50px;
 }
