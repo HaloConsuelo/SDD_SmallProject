@@ -1,3 +1,13 @@
 .navbar{
     margin-bottom: 50px;
+    background-color: #343434;
+}
+
+
+.h1, h1 {
+    font-family: 'Arizonia', cursive;
+    color: white;
+    border-bottom: 3px solid;
+    letter-spacing: 5px;
+    font-size: 50px;
 }
