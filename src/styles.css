@@ -40,9 +40,6 @@ mat-toolbar.mat-toolbar{
     color: #F5F5F5;
 }
 
-
-
-
 .nav-link {
     color: white;
     font-family: 'Economica', sans-serif;
@@ -50,10 +47,4 @@ mat-toolbar.mat-toolbar{
 
 }
 
-.h1, h1 {
-    font-family: 'Arizonia', cursive;
-    color: white;
-    border-bottom: 3px solid;
-    letter-spacing: 5px;
-    font-size: 50px;
-}
+
